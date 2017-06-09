@@ -17,6 +17,7 @@ $app->get('/', function () use ($app) {
 
 $app->post('/webhook',function(Request $request) {
     $requestRaw = $request->getContent();
+    Log::debug($requestRaw);
     $request = json_decode($requestRaw);
     if(json_last_error()) {
         return ['data'=>['error_msg'=>'Request JSON String '.json_last_error_msg(),'request'=>$requestRaw]];
