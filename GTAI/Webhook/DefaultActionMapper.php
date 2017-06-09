@@ -10,12 +10,12 @@ class DefaultActionMapper implements ActionMapper
         $closure($this);
     }
 
-    public function register(String $action, $closure)
+    public function register($action, $closure)
     {
         $this->_mapper[$action] = $closure;
     }
 
-    public function getHandler(String $action) 
+    public function getHandler($action) 
     {
         $handler = $this->_mapper[$action];
         if(is_object($handler) && ($handler instanceof Closure)) 

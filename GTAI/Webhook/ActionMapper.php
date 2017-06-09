@@ -5,7 +5,7 @@ interface ActionMapper
 {
     public function load(\Closure $closure);    
 
-    public function register(String $action,  $closure);
+    public function register($action,  $closure);
 
-    public function getHandler(String $action);
+    public function getHandler($action);
 }
