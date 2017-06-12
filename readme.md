@@ -7,3 +7,4 @@
 
 ## Log folder
 storage/logs/lumen.log
+# API.AI_sample
